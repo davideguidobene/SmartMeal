@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.customer.bottomnavigation.home.HomeFragment">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/local_name_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="Nome locale"
+                android:textSize="@dimen/text_size_large"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/description_text_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis sollicitudin nisl sed pharetra imperdiet. Nullam iaculis venenatis iaculis. Aenean nec aliquet ante. Vestibulum rutrum arcu eget eleifend dictum. Vestibulum nisl ante, mattis vitae erat et, rutrum luctus tortor. Vestibulum urna lorem, vulputate quis pretium non, luctus non ante. Sed eget nunc justo. Integer fermentum rhoncus est in molestie. Mauris pharetra, nulla nec volutpat cursus, neque metus semper erat, ut blandit ligula mi sit amet risus. Morbi pretium orci sit amet lorem ullamcorper, eu consectetur eros sodales. Morbi commodo ex vitae gravida mattis." />
+
+            <ImageView
+                android:id="@+id/local_image_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:src="@drawable/localpicture" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

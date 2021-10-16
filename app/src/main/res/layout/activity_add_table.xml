@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_marginLeft="5dp"
+    android:layout_marginRight="5dp"
+    android:orientation="vertical"
+    tools:context=".ui.manager.bottomnavigation_virtualroom.tableList.addTable.AddTableActivity">
+
+    <TextView
+        android:id="@+id/insert_new_costumer_hint_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/insert_new_customer_hint"
+        android:textSize="@dimen/text_size_large" />
+
+    <EditText
+        android:id="@+id/insert_new_costumer_edit_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="@string/name_edit_text_hint"
+        android:inputType="textPersonName" />
+
+    <TextView
+        android:id="@+id/select_table_hint_text_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/select_table_hint"
+        android:textSize="@dimen/text_size_large" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/add_table_recycler_view"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:scrollbars="vertical" />
+</LinearLayout>

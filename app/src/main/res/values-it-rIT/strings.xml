@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Smart Meal</string>
+
+    <string name="select_app_mode_hint">Seleziona modalità</string>
+    <string name="client">Cliente</string>
+    <string name="manager">Gestore</string>
+    <string name="insert_personal_data_hint">Inserisci nome</string>
+    <string name="name_edit_text_hint">Nome</string>
+
+    <string name="confirmation_button_text">Conferma</string>
+    <string name="cancellation_button_text">Annulla</string>
+
+    <string name="field_required_snackbar">Campo obbligatorio</string>
+
+    <string name="title_customer_home_fragment">Home</string>
+    <string name="title_customer_menu_fragment">Menù</string>
+    <string name="title_customer_maps_fragment">Mappa</string>
+
+    <string name="decimal_separator">,</string>
+
+    <string name="leave_room">Esci</string>
+    <string name="call_waiter">Chiama cameriere</string>
+    <string name="menu">Menù</string>
+    <string name="connected_message">Sei connesso</string>
+    <string name="selected_table_message">Sei seduto al tavolo</string>
+
+    <string name="table">Tavolo</string>
+
+    <string name="waiter_notification_confirmed">Chiamata al cameriere inviata correttamente</string>
+    <string name="waiter_notification_rejected">Troppe chiamate al cameriere</string>
+
+    <string name="already_occupied_table_snackbar">Il tavolo selezionato è già occupato</string>
+    <string name="unexpected_table_error_snackbar">Errore imprevisto nella selezione del tavolo</string>
+
+    <!-- Settings -->
+    <string name="settings">Impostazioni</string>
+    <string name="notifications_settings">Notifiche</string>
+    <string name="sensors_settings">Sensori</string>
+    <string name="change_name_settings">Modifica nome</string>
+    <string name="logout_settings">Logout</string>
+    <string name="about_settings">About</string>
+
+    <string name="table_confirmation_text">Hai scelto il tavolo</string>
+    <string name="select_table">Seleziona tavolo</string>
+
+
+    <string name="manager_closed_virtual_room">Il gestore ha chiuso la stanza virtuale</string>
+    <string name="timeout_error_snackbar">Comunicazione non riuscita</string>
+    <string name="leave_virtual_dialog_title">Stai lasciando la stanza</string>
+    <string name="leave_virtual_room_dialog_text">Sei sicuro di voler lasciare la stanza virtuale?</string>
+    <string name="grant_permission_snackbar_text">Concedi i permessi dalle impostazioni</string>
+
+
+    <string name="insert_password_hint">Inserisci password</string>
+    <string name="incorrect_password_snackbar">Password sbagliata</string>
+
+    <string name="button_manager_home_room_text">Crea stanza</string>
+    <string name="button_manager_home_menu_text">Mostra menu</string>
+    <string name="button_manager_home_description_text">Mostra descrizione</string>
+
+    <string name="title_manager_home">Home</string>
+    <string name="title_manager_description">Descrizione</string>
+    <string name="title_manager_menu">Menu</string>
+
+
+    <string name="title_manager_room_waiterNotifications_fragment">Notifiche cameriere</string>
+    <string name="title_manager_room_tableList_fragment">Gestione tavoli</string>
+
+    <string name="table_prefix">Tavolo:</string>
+
+    <string name="close_label_alert">Chiudi</string>
+
+    <string name="cancel_label_alert">Annulla</string>
+
+    <string name="error_manager_room_snackbar">Impossibile creare una stanza virtuale ora</string>
+
+    <string name="modify_table_button_label">Modifica</string>
+    <string name="delete_table_button_label">Elimina</string>
+
+    <string name="reload_button_label">Aggiorna</string>
+
+    <string name="insert_new_customer_hint">Inserisci il nome cliente</string>
+    <string name="select_table_hint">Seleziona un tavolo</string>
+
+    <string name="no_new_customer_name_snackbar">Devi specificare il nome del cliente</string>
+
+    <string name="assign_table">Assegna</string>
+    <string name="added_table_alert">Tavolo aggiunto correttamente!</string>
+
+    <string name="modify_table_alert">Seleziona il nuovo tavolo per il cliente</string>
+    <string name="confirm_label_alert">Conferma</string>
+
+    <string name="modify_table_error_alert">Errore: il tavolo non è stato cambiato</string>
+
+    <string name="confirm_close_room_alert">Sei sicuro di voler chiudere la stanza?</string>
+
+    <string name="error_delete_notification_snackbar">Impossibile rimuovere questa notifica ora: riprovare dopo aver aggiornato</string>
+    <string name="error_delete_table_snackbar">Impossibile rimuovere questo tavolo ora: riprovare dopo aver aggiornato</string>
+    <string name="error_modify_table_snackbar">Impossibile modificare questo tavolo ora: tutti i tavoli sono attualmente occupati</string>
+    <string name="error_add_table_snackbar">Impossibile aggiungere un tavolo ora: tutti i tavoli sono attualmente occupati</string>
+
+    <string name="error_add_table_alert">Errore: il tavolo è già occupato</string>
+    <string name="title_add_table">Assegna un tavolo libero</string>
+
+    <string name="table_removed_snackbar">Il gestore ha rimosso il tuo tavolo</string>
+    <string name="table_changed_snackbar">Il gestore ha cambiato il tuo tavolo</string>
+    <string name="unexpected_error_snackbar">Errore inatteso</string>
+
+    <!-- Welcome notification -->
+    <string name="welcome_notification_channel_name">Notifica di benvenuto</string>
+    <string name="welcome_notification_channel_description">Canale per le notifiche di benvenuto.</string>
+    <string name="welcome_notification_title_prefix">Benvenuto da</string>
+    <string name="welcome_notification_description">Clicca qui per entrare nella stanza virtuale</string>
+</resources>
