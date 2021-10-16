@@ -1,0 +1,29 @@
+participant Application
+participant CustomerCommunication
+participant CustomerStorage
+
+participant ManagerCommunication
+
+participant Sensor
+
+
+activate Application
+Application->>CustomerCommunication:joinRoom(onSuccess)
+activate CustomerCommunication
+
+
+CustomerCommunication->CustomerStorage:getName()
+activate CustomerStorage
+CustomerCommunication<--CustomerStorage:name
+deactivate CustomerStorage
+
+
+CustomerCommunication->ManagerCommunication:connect(name)
+activate ManagerCommunication
+CustomerCommunication<--ManagerCommunication:success
+deactivate ManagerCommunication
+
+group onSuccess() [success] 
+Application->Sensor: startShakeDetection()
+activate Sensor
+end

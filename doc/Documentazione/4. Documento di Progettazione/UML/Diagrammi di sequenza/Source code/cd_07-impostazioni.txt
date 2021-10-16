@@ -1,0 +1,17 @@
+participant Application
+participant CustomerStorage
+
+activate Application
+
+group showSettings()
+activate CustomerStorage
+Application->CustomerStorage:isEntranceNotificationEnabled()
+Application<--CustomerStorage:notificationEnabled
+deactivate CustomerStorage
+activate CustomerStorage
+Application->CustomerStorage:areSensorsEnabled()
+Application<--CustomerStorage:sensorsEnabled
+deactivate CustomerStorage
+end
+
+# Application->Application:showSettings(notificationEnabled, sensorsEnabled)

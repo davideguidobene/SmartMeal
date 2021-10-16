@@ -1,0 +1,7 @@
+participant Application
+participant ManagerStorage
+
+activate Application
+
+Application->ManagerStorage:showSettings()
+activate ManagerStorage

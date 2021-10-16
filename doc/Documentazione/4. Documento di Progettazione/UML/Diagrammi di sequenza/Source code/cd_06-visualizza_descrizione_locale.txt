@@ -1,0 +1,11 @@
+participant Application
+participant CustomerStorage
+
+
+activate Application
+Application->CustomerStorage:getLocalDescription()
+activate CustomerStorage
+Application<--CustomerStorage: localDescription
+deactivate CustomerStorage
+
+Application->Application:showLocalDescription(localDescription)

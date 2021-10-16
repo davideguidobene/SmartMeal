@@ -1,0 +1,45 @@
+participant Application
+participant CustomerCommunication
+participant ManagerCommunication
+participant Local
+participant TableHandler
+
+
+activate Application
+
+activate Local
+Local->ManagerCommunication:onSelectTable(onSelectTableCallback)
+deactivate Local
+activate ManagerCommunication
+
+
+Application->CustomerCommunication:selectTable(table)
+activate CustomerCommunication
+
+deactivate ManagerCommunication
+
+CustomerCommunication->CustomerCommunication:sendMessage(table)
+
+CustomerCommunication->ManagerCommunication:il messaggio viene inviato al gestore (table)
+deactivate CustomerCommunication
+
+
+
+activate ManagerCommunication
+
+ManagerCommunication->ManagerCommunication:prendi l'id `customer` del mittente
+
+
+group onSelectTableCallback(customer, table)
+ManagerCommunication->TableHandler:assignTable(customer, table)
+activate TableHandler
+ManagerCommunication<--TableHandler:exception
+deactivate TableHandler
+
+ManagerCommunication->ManagerCommunication:[exception]: reportException(exception)
+CustomerCommunication<-ManagerCommunication:viene riportato se assignTable ha avuto successo
+activate CustomerCommunication
+end
+
+
+deactivate ManagerCommunication

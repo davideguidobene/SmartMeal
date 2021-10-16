@@ -1,0 +1,12 @@
+participant Application
+participant CustomerStorage
+
+
+activate Application
+Application->CustomerStorage:isEntranceNotificationEnabled()
+activate CustomerStorage
+Application<--CustomerStorage:notificationEnabled
+deactivate CustomerStorage
+Application->CustomerStorage:setEntranceNotificationEnabled(!notificationEnabled)
+activate CustomerStorage
+deactivate CustomerStorage

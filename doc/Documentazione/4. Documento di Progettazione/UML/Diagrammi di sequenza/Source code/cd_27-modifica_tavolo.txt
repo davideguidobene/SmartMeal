@@ -1,0 +1,25 @@
+participant Application
+participant Local
+participant TableHandler
+participant LocalCustomerHandler
+participant ManagerCommunication
+
+activate Application
+Application->Local:changeCustomerTable(customer, newTable)
+activate Local
+Local->TableHandler:changeCustomerTable(customer, newTable)
+activate TableHandler
+Local<--TableHandler:exception
+deactivate TableHandler
+
+Local->LocalCustomerHandler:[!exception] contains(customer)
+activate LocalCustomerHandler
+Local<--LocalCustomerHandler:result
+deactivate LocalCustomerHandler
+
+Local->>ManagerCommunication:[result] notifyTableChanged(customer)
+activate ManagerCommunication
+
+
+Application<--Local:exception
+deactivate Local

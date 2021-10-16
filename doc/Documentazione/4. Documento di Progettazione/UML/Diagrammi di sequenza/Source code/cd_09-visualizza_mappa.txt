@@ -1,0 +1,11 @@
+participant Application
+participant CustomerStorage
+
+
+activate Application
+Application->CustomerStorage:getLocation()
+activate CustomerStorage
+Application<--CustomerStorage: location
+deactivate CustomerStorage
+
+Application->Application:showMapsPage(location)

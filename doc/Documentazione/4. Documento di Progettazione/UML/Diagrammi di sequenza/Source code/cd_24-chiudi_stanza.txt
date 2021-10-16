@@ -1,0 +1,15 @@
+participant Application
+participant Local
+participant ManagerCommunication
+
+
+activate Application
+Application->Local:closeRoom()
+activate Local
+
+Local->ManagerCommunication:closeRoom()
+activate ManagerCommunication
+
+ManagerCommunication->ManagerCommunication:disconnect()
+deactivate ManagerCommunication
+deactivate Local

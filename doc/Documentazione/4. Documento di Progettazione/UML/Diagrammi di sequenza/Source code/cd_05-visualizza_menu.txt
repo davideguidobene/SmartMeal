@@ -1,0 +1,11 @@
+participant Application
+participant CustomerStorage
+
+
+activate Application
+Application->CustomerStorage:getMenu()
+activate CustomerStorage
+Application<--CustomerStorage: menu
+deactivate CustomerStorage
+
+Application->Application:showMenuPage(menu)

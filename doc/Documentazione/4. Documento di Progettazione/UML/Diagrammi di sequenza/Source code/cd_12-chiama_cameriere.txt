@@ -1,0 +1,45 @@
+participant Application
+participant CustomerCommunication
+participant ManagerCommunication
+participant Local
+participant WaiterNotificationHandler
+
+
+activate Application
+
+activate Local
+Local->ManagerCommunication:onNotifyWaiter(onNotifyWaiterCallback)
+deactivate Local
+activate ManagerCommunication
+
+
+Application->CustomerCommunication:notifyWaiter()
+activate CustomerCommunication
+
+deactivate ManagerCommunication
+
+CustomerCommunication->CustomerCommunication:sendMessage(WAITER_NOTIFICATION)
+
+CustomerCommunication->ManagerCommunication:il messaggio viene inviato al gestore
+deactivate CustomerCommunication
+
+
+activate ManagerCommunication
+
+ManagerCommunication->ManagerCommunication:prendi l'id `customer` del mittente
+
+
+group onNotifyWaiterCallback(customer)
+ManagerCommunication->WaiterNotificationHandler:addNotification(customer)
+activate WaiterNotificationHandler
+ManagerCommunication<--WaiterNotificationHandler:exception
+deactivate WaiterNotificationHandler
+
+ManagerCommunication->ManagerCommunication:[exception]: reportException(exception)
+CustomerCommunication<-ManagerCommunication:viene riportato se addNotification ha avuto successo
+activate CustomerCommunication
+
+
+end
+
+deactivate ManagerCommunication

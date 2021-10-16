@@ -1,0 +1,37 @@
+participant Application
+participant Local
+participant TableHandler
+participant LocalCustomerHandler
+participant ManagerCommunication
+
+
+
+activate Application
+
+
+
+Application->Local:freeTable(table)
+activate Local
+
+
+Local->TableHandler:getCustomer(table)
+activate TableHandler
+Local<--TableHandler:customer
+
+deactivate TableHandler
+
+Local->TableHandler:freeTable(table)
+activate TableHandler
+Local<--TableHandler:exception
+deactivate TableHandler
+
+Local->LocalCustomerHandler:[!exception] contains(customer)
+activate LocalCustomerHandler
+Local<--LocalCustomerHandler:result
+deactivate LocalCustomerHandler
+
+Local->>ManagerCommunication:[result] notifyTableRemoved(customer)
+activate ManagerCommunication
+
+Application<--Local:exception
+deactivate Local

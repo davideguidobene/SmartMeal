@@ -1,0 +1,13 @@
+participant Application
+participant CustomerCommunication
+
+participant ManagerCommunication
+
+activate ManagerCommunication
+
+activate Application
+Application->CustomerCommunication:closeRoom()
+activate CustomerCommunication
+
+CustomerCommunication->ManagerCommunication:disconnect(name)
+deactivate CustomerCommunication

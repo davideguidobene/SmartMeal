@@ -1,0 +1,7 @@
+participant Application
+participant CustomerStorage
+
+
+activate Application
+Application->CustomerStorage:setName(name)
+activate CustomerStorage

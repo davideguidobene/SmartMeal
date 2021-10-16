@@ -1,0 +1,16 @@
+participant Application
+participant Local
+participant TableHandler
+
+
+activate Application
+
+
+Application->Local:assignTable(customer, table)
+activate Local
+Local->TableHandler:assignTable(customer, table)
+activate TableHandler
+Local<--TableHandler:exception
+deactivate TableHandler
+Application<--Local:exception
+deactivate Local

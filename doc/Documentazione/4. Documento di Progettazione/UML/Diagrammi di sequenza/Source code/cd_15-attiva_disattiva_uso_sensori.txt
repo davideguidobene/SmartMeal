@@ -1,0 +1,12 @@
+participant Application
+participant CustomerStorage
+
+
+activate Application
+Application->CustomerStorage:areSensorsEnabled()
+activate CustomerStorage
+Application<--CustomerStorage:sensorsEnabled
+deactivate CustomerStorage
+Application->CustomerStorage:setSensorsEnabled(!notificationEnabled)
+activate CustomerStorage
+deactivate CustomerStorage

@@ -1,0 +1,11 @@
+participant Application
+participant CustomerStorage
+
+
+activate Application
+Application->CustomerStorage:clear()
+activate CustomerStorage
+CustomerStorage->CustomerStorage:setApplicationMode(ApplicationMode.UNDEFINED)
+deactivate CustomerStorage
+
+Application->Application:showSelectAppModePage()

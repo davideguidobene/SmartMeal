@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2020-10-26" view-index="0" gantt-divider-location="682" resource-divider-location="300" version="2.8.11" locale="it_IT">
+    <description/>
+    <view zooming-state="default:5" id="gantt-chart">
+        <field id="tpd3" name="Nome" width="424" order="0"/>
+        <field id="tpd4" name="Data d'inizio" width="126" order="1"/>
+        <field id="tpd5" name="Data di fine" width="128" order="2"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nome" width="210" order="0"/>
+        <field id="1" name="Ruolo predefinito" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="8" name="Analisi dello scopo e delle funzionalità dell'applicazione" color="#8cb6ce" meeting="false" start="2020-09-21" duration="7" complete="0" thirdDate="2020-08-31" thirdDate-constraint="0" expand="true">
+            <depend id="17" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="11" name="Copertura lacune conoscenza ambiente Android" color="#8cb6ce" meeting="false" start="2020-09-21" duration="21" complete="0" thirdDate="2020-09-08" thirdDate-constraint="0" expand="true"/>
+        <task id="17" name="Piano di progetto" color="#8cb6ce" meeting="false" start="2020-09-28" duration="14" complete="0" thirdDate="2020-09-10" thirdDate-constraint="0" expand="true">
+            <depend id="23" type="2" difference="0" hardness="Strong"/>
+            <depend id="28" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="23" name="Documento di analisi e specifica" color="#8cb6ce" meeting="false" start="2020-10-12" duration="14" complete="0" thirdDate="2020-09-14" thirdDate-constraint="0" expand="true">
+            <depend id="26" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="28" name="Analisi specifica applicazione #1" color="#8cb6ce" meeting="false" start="2020-10-12" duration="7" complete="0" thirdDate="2020-10-05" thirdDate-constraint="0" expand="true">
+            <depend id="29" type="2" difference="0" hardness="Strong"/>
+            <depend id="30" type="2" difference="0" hardness="Strong"/>
+            <depend id="31" type="2" difference="0" hardness="Strong"/>
+            <depend id="42" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="29" name="Interfaccia grafica #1" color="#8cb6ce" meeting="false" start="2020-10-19" duration="4" complete="0" thirdDate="2020-10-05" thirdDate-constraint="1" expand="true">
+            <depend id="43" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="30" name="Definizione protocollo comunicazione #1" color="#8cb6ce" meeting="false" start="2020-10-19" duration="7" complete="0" thirdDate="2020-10-11" thirdDate-constraint="0" expand="true">
+            <depend id="43" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="31" name="Codice per utilizzo sensori #1" color="#8cb6ce" meeting="false" start="2020-10-19" duration="4" complete="0" thirdDate="2020-10-05" thirdDate-constraint="0" expand="true">
+            <depend id="43" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="42" name="Codice rilevamento entrata del cliente #1" color="#8cb6ce" meeting="false" start="2020-10-19" duration="2" complete="0" thirdDate="2020-09-21" thirdDate-constraint="0" expand="true">
+            <depend id="43" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="26" name="Piano di testing" color="#8cb6ce" meeting="false" start="2020-10-26" duration="14" complete="0" thirdDate="2020-10-19" thirdDate-constraint="0" expand="true">
+            <depend id="27" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="43" name="Validazione applicazione" color="#8cb6ce" meeting="false" start="2020-10-26" duration="3" complete="0" thirdDate="2020-09-14" thirdDate-constraint="0" expand="true">
+            <depend id="45" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="27" name="Documento di progettazione" color="#8cb6ce" meeting="false" start="2020-11-09" duration="14" complete="0" thirdDate="2020-11-02" thirdDate-constraint="0" expand="true">
+            <depend id="112" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="45" name="Analisi specifica applicazione #2" color="#8cb6ce" meeting="false" start="2020-10-29" duration="3" complete="0" thirdDate="2020-10-05" thirdDate-constraint="0" expand="true">
+            <depend id="47" type="2" difference="0" hardness="Strong"/>
+            <depend id="49" type="2" difference="0" hardness="Strong"/>
+            <depend id="51" type="2" difference="0" hardness="Strong"/>
+            <depend id="69" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="47" name="Interfaccia grafica #2" color="#8cb6ce" meeting="false" start="2020-11-01" duration="4" complete="0" thirdDate="2020-10-05" thirdDate-constraint="1" expand="true">
+            <depend id="53" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="49" name="Codice che gestisce la comunicazione peer to peer #2" color="#8cb6ce" meeting="false" start="2020-11-01" duration="10" complete="0" thirdDate="2020-10-05" thirdDate-constraint="0" expand="true">
+            <depend id="53" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="51" name="Codice rilevamento entrata del cliente #2" color="#8cb6ce" meeting="false" start="2020-11-01" duration="2" complete="0" thirdDate="2020-09-21" thirdDate-constraint="0" expand="true">
+            <depend id="53" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="69" name="Codice per utilizzo sensori  #2" color="#8cb6ce" meeting="false" start="2020-11-01" duration="4" complete="0" thirdDate="2020-10-18" thirdDate-constraint="0" expand="true">
+            <depend id="53" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="53" name="Validazione applicazione #2" color="#8cb6ce" meeting="false" start="2020-11-11" duration="3" complete="0" thirdDate="2020-09-14" thirdDate-constraint="0" expand="true">
+            <depend id="84" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="84" name="Analisi specifica applicazione #3" color="#8cb6ce" meeting="false" start="2020-11-14" duration="2" complete="0" thirdDate="2020-11-03" thirdDate-constraint="0" expand="true">
+            <depend id="85" type="2" difference="0" hardness="Strong"/>
+            <depend id="86" type="2" difference="0" hardness="Strong"/>
+            <depend id="89" type="2" difference="0" hardness="Strong"/>
+            <depend id="90" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="89" name="Interfaccia grafica #3" color="#8cb6ce" meeting="false" start="2020-11-16" duration="4" complete="0" thirdDate="2020-11-04" thirdDate-constraint="0" expand="true">
+            <depend id="87" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="90" name="Codice che gestisce la comunicazione peer to peer #3" color="#8cb6ce" meeting="false" start="2020-11-16" duration="10" complete="0" thirdDate="2020-11-04" thirdDate-constraint="0" expand="true">
+            <depend id="87" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="85" name="Codice rilevamento entrata del cliente #3" color="#8cb6ce" meeting="false" start="2020-11-16" duration="2" complete="0" thirdDate="2020-11-04" thirdDate-constraint="0" expand="true">
+            <depend id="87" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="86" name="Codice per utilizzo sensori  #3" color="#8cb6ce" meeting="false" start="2020-11-16" duration="4" complete="0" thirdDate="2020-10-09" thirdDate-constraint="0" expand="true">
+            <depend id="87" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="87" name="Validazione applicazione #3" color="#8cb6ce" meeting="false" start="2020-11-26" duration="3" complete="0" thirdDate="2020-11-14" thirdDate-constraint="0" expand="true">
+            <depend id="112" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="112" name="Testing finale" color="#8cb6ce" meeting="false" start="2020-11-29" duration="7" complete="0" thirdDate="2020-11-08" thirdDate-constraint="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

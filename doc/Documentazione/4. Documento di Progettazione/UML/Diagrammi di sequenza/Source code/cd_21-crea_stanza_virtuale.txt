@@ -1,0 +1,20 @@
+participant Application
+participant Local
+participant ManagerCommunication
+participant ManagerStorage
+
+
+activate Application
+Application->>Local:createRoom()
+activate Local
+Local->>ManagerCommunication:startRoom()
+activate ManagerCommunication
+
+
+ManagerCommunication->ManagerStorage:getName()
+activate ManagerStorage
+ManagerCommunication<--ManagerStorage:name
+deactivate ManagerStorage
+
+
+ManagerCommunication->ManagerCommunication:startAdvertising(name, onConnectionCallback)

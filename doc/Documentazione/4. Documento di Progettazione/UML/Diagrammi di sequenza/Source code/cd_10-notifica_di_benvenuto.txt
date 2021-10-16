@@ -1,0 +1,26 @@
+participant User Device
+participant Application
+participant Sensor
+
+
+activate User Device
+
+activate Application
+Application->Sensor:startEntranceDetection(onEntranceCallback)
+deactivate Application
+activate Sensor
+
+
+User Device<-Sensor:chiedi di notificare quando utente entra nel locale
+deactivate Sensor
+
+User Device->Sensor:utente entra nel locale
+activate Sensor
+
+
+Application<-Sensor:onEntranceCallback()
+deactivate Sensor
+activate Application
+
+User Device<-Application:mostra notifica all'utente
+deactivate Application

@@ -1,0 +1,11 @@
+participant Application
+participant ManagerStorage
+
+
+activate Application
+Application->ManagerStorage:getLocalDescription()
+activate ManagerStorage
+Application<--ManagerStorage: localDescription
+deactivate ManagerStorage
+
+Application->Application:showLocalDescriptionPage(localDescription)

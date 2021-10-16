@@ -1,0 +1,11 @@
+participant Application
+participant ManagerStorage
+
+
+activate Application
+Application->ManagerStorage:clear()
+activate ManagerStorage
+ManagerStorage->ManagerStorage:setApplicationMode(ApplicationMode.UNDEFINED)
+deactivate ManagerStorage
+
+Application->Application:showSelectAppModePage()

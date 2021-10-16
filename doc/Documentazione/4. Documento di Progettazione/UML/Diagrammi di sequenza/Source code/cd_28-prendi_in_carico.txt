@@ -1,0 +1,14 @@
+participant Application
+participant Local
+participant WaiterNotificationHandler
+
+
+activate Application
+Application->Local:removeWaiterNotification(waiterNotification)
+activate Local
+Local->WaiterNotificationHandler:removeNotification(waiterNotification)
+activate WaiterNotificationHandler
+Local<--WaiterNotificationHandler:exception
+deactivate WaiterNotificationHandler
+Application<--Local:exception
+deactivate Local

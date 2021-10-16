@@ -1,0 +1,7 @@
+participant Application
+participant ManagerStorage
+
+
+activate Application
+Application->ManagerStorage:setApplicationMode(ApplicationMode.MANAGER)
+activate ManagerStorage

@@ -1,0 +1,11 @@
+participant Application
+participant ManagerStorage
+
+
+activate Application
+Application->ManagerStorage:getMenu()
+activate ManagerStorage
+Application<--ManagerStorage: menu
+deactivate ManagerStorage
+
+Application->Application:showMenuPage(menu)

@@ -1,0 +1,14 @@
+participant Application
+participant Local
+participant TableHandler
+
+
+activate Application
+Application->Local:getAssignedTableList()
+activate Local
+Local->TableHandler:getAssignedTableList()
+activate TableHandler
+Local<--TableHandler:assignedTableList
+deactivate TableHandler
+Application<--Local:assignedTableList
+deactivate Local
